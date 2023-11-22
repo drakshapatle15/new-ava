@@ -3,6 +3,7 @@ import { IChat } from "./chat.model";
 
 export interface IUser extends Document {
   user_id: string;
+  persona_id: string;
   fcm_token: string;
   name: string;
   phone_no: string;
@@ -12,6 +13,7 @@ export interface IUser extends Document {
 
 const userSchema: Schema = new Schema({
   user_id: { type: String, required: true, unique: true },
+  persona_id: { type: String, required: true, unique: true },
   fcm_token: { type: String, required: true },
   name: { type: String, required: true },
   phone_no: { type: String, required: true },

@@ -20,6 +20,7 @@ class UserController {
         existingUser.name = name;
         existingUser.phone_no = phone_no;
         existingUser.country_code = country_code;
+
         const updatedUser: IUser = await existingUser.save();
       } else {
         // Create a new user
